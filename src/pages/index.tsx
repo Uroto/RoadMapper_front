@@ -1,13 +1,13 @@
 import { Inter } from 'next/font/google'
 import { Main } from 'next/document';
 import { useEffect, useState } from 'react'
-import { gptResType } from './generate.interface';
+import { gptResType, flowPairType } from './generate.interface';
 import styles from '../styles/flow.module.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const [data, setdata] = useState<gptResType | null>(null);
+  const [data, setdata] = useState<gptResType>({ word: '', topic: '', flow: [] });
   const [word, setWord] = useState<string>('');
   const url:string = "http://localhost:5000/generate";
 
@@ -53,12 +53,12 @@ export default function Home() {
         </div>
         <div className={styles.flow_design01}>
           <ul className={styles.flow01}>
-            {data?.flow.map((content, index) => {
+            {data?.flow?.map((content, index) => {
               return (
                 <li key={index}>
                   <dl>
-                    <dt><span className={styles.icon01}>STEP&nbsp;1</span>お申し込み</dt>
-                    <dd>{content}</dd>
+                    <dt><span className={styles.icon01}>STEP&nbsp;{content.num}</span>{content.title}</dt>
+                    <dd>{content.flow}</dd>
                   </dl>
                 </li>
               )
