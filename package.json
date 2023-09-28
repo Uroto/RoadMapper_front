@@ -17,8 +17,10 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "autoprefixer": "^10.4.16",
     "eslint": "latest",
     "eslint-config-next": "latest",
+    "postcss": "^8.4.30",
     "sass": "^1.68.0",
     "typescript": "latest"
   }
