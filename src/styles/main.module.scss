@@ -9,28 +9,37 @@
             align-items: center;
             justify-content: center;
 
-            input {
-                height: 2.4em;
-                padding: 0 16px;
-                border-radius: 4px;
-                border: none;
-                box-shadow: 0 0 0 1px #ccc inset;
-                appearance: none;
-                -webkit-appearance: none;
-                -moz-appearance: none;
+            #input{
+                display: flex;
+                flex-direction: row;
+                border: #ccc solid 1px;
 
-                &:focus {
-                    outline: none;
-                    box-shadow: 0 0 0 1px #0070f3 inset;
+                #logo {
+                    height: 35px;
+                    background-color: white;
                 }
-            }
 
-            button {
-                height: 2.5em;
-                padding: 0 16px;
-                border: none;
-                box-shadow: 0 0 0 1px #ccc inset;
-                background-color: #8EB83C;
+                input {
+                    height: 35px;
+                    padding: 0 16px;
+                    border-radius: 4px;
+                    border: none;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+    
+                    &:focus {
+                        outline: none;
+                        // box-shadow: 0 0 0 1px #0070f3 inset;
+                    }
+                }
+    
+                button {
+                    height: 35px;
+                    padding: 0 16px;
+                    border: none;
+                    background-color: white;
+                }
             }
         }
     }
