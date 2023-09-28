@@ -1,0 +1,98 @@
+$image_color: #8EB83C;
+
+
+.flow_design02 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.flow_design02 ul {
+  padding: 0;
+}
+
+.flow_design02 li {
+  list-style-type: none;
+}
+
+.flow_design02 dd {
+  margin-left: 0;
+}
+
+.flow02 {
+  position: relative;
+}
+
+.flow02::before {
+  content: "";
+  width: 15px;
+  height: 100%;
+  background: #eee;
+  margin-left: -129px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 120px;
+  border-radius: 20px;
+}
+
+.flow02 > li {
+  position: relative;
+}
+
+.flow02 > li:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.flow02 > li .icon02 {
+  font-size: 0.8em;
+  width: 2em;
+  height: 2em;
+  line-height: 2;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 100vh;
+  color: #fff;
+  background: #8EB83C;
+  display: inline-block;
+  margin-right: 0.3em;
+}
+
+.flow02 > li dl {
+  padding-left: 70px;
+  position: relative;
+}
+
+.flow02 > li dl::before,
+.flow02 > li dl::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 15px;
+}
+
+.flow02 > li dl::before {
+  width: 7px;
+  height: 7px;
+  margin-top: -3px;
+  background: #8EB83C;
+  border-radius: 50%;
+  left: -4px;
+}
+
+.flow02 > li dl::after {
+  width: 50px;
+  border-bottom: 1px dashed #999;
+  position: absolute;
+  left: 5px;
+}
+
+.flow02 > li dl dt {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #8EB83C;
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+}

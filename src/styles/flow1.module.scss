@@ -1,3 +1,5 @@
+$image_color: green;
+
 .flow_design01 {
     display: flex;
     justify-content: center;
@@ -35,7 +37,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    border: 2px solid green;
+    border: 2px solid $image_color;
     border-radius: 10px;
     position: relative;
   }
@@ -53,7 +55,7 @@
   
   .flow01 > li:not(:last-child) dl::before {
     border-width: 22px;
-    border-top-color: green;
+    border-top-color: $image_color;
   }
   
   .flow01 > li:not(:last-child) dl::after {
@@ -73,7 +75,7 @@
   .flow01 > li dl dt .icon01 {
     font-size: 0.6em;
     color: #fff;
-    background: green;
+    background: $image_color;
     padding: 5px 10px;
     margin-bottom: 10px;
     display: block;
