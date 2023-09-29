@@ -1,6 +1,12 @@
 #header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     padding: 15px;
-    background-color: lightcyan;
+    margin: 1vh 1vw;
+    border-radius: 7px;
+    background-color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: green;
 
     h2 {

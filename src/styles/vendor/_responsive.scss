@@ -1,0 +1,16 @@
+$breakpoints: (
+    //480px以上
+    'sm': '(max-width: 599px)',
+    //600px以上
+    'md': '(min-width: 600px)',
+    //960px以上
+    'lg': '(min-width: 960px)',
+    //1280px以上
+    'xl': '(min-width: 1280px)'
+);
+
+@mixin mq($breakpoint : md) {
+    @media #{map-get($breakpoints, $breakpoint)}{
+        @content;
+    }
+}
