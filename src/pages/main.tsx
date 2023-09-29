@@ -78,7 +78,7 @@ export default function Home() {
           </div>
           : ''}
         </div>
-        {generated ? 
+        {generated && data.topic !== '' ? 
         <div id={styles.topic}>
           <h2>概要</h2>
           <p>{data.topic}</p>
