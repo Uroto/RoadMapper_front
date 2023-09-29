@@ -13,6 +13,7 @@ export default function Home() {
   const [level, setLevel] = useState<string>('');
   const [time, setTime] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
+  const [generated, setGenerated] = useState<boolean>(false);
   const url:string = "http://localhost:5000/generate";
 
   const btnHandler = async () => {
@@ -28,6 +29,7 @@ export default function Home() {
     } finally {
       setLoading(false);
       setText("");
+      setGenerated(true);
     }
   }
 
@@ -76,6 +78,12 @@ export default function Home() {
           </div>
           : ''}
         </div>
+        {generated ? 
+        <div id={styles.topic}>
+          <h2>概要</h2>
+          <p>{data.topic}</p>
+        </div>
+        : ''}
         <div className={styles_flow.flow_design} id={styles.flow}>
           <ul className={styles_flow.flow}>
             {data?.flow?.map((content: flowPairType, index: number) => {
