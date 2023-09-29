@@ -4,6 +4,7 @@ import styles_flow from '../styles/vendor/flow.module.scss'
 import styles from '../styles/main.module.scss'
 import { flowReq } from './api/flowReq'
 import Header from './module/Header';
+import Footer from './module/Footer';
 import Image from 'next/image';
 
 export default function Home() {
@@ -99,6 +100,7 @@ export default function Home() {
           </ul>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }
