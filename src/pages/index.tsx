@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import styles from '../styles/top.module.scss'
 import Header from './module/Header';
+import Footer from './module/Footer';
 
 export default function Main() {
   return (
@@ -10,6 +11,7 @@ export default function Main() {
           <h1>新しい学びに<br/>最適な手順を提供</h1>
           <Link href="/main" id={styles.subText}>試してみる</Link>
         </div>
+        <Footer/>
       </div>
   )
 }
