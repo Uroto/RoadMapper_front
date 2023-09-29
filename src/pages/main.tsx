@@ -16,9 +16,12 @@ export default function Home() {
   const url:string = "http://localhost:5000/generate";
 
   const btnHandler = async () => {
+    if (word === '' || level === '' || time === ''){
+      return alert("△回答欄を全て入力してください△");
+    }
     setLoading(true);
     try {
-      const res = await flowReq(url, word);
+      const res = await flowReq(url, word, level, time);
       setdata(res);
     } catch(err) {
       console.log(err);
@@ -57,7 +60,7 @@ export default function Home() {
             value={time} // value propを使用
             onChange={(e) => setTime(e.target.value)} // onChangeイベントを追加
           >
-              <option value="" disabled hidden>とれる時間</option>
+              <option value="" disabled hidden>習得時間</option>
               <option value="1 week">1週間</option>
               <option value="1~3 months">1ヶ月～3ヶ月</option>
               <option value="half year">半年</option>
