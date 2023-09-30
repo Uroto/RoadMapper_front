@@ -1,6 +1,11 @@
 #overall {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
     #main {
+        flex: 1;
+
         #top {
             margin: 5vh 0;
             display: flex;

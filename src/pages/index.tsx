@@ -8,8 +8,10 @@ export default function Main() {
       <div id={styles.content}>
         <Header/>
         <div id={styles.wrapper}>
-          <h1>新しい学びに<br/>最適な手順を提供</h1>
-          <Link href="/main" id={styles.subText}>試してみる</Link>
+          <div id={styles.minwrapper}>
+            <h1>新しい学びに<br/>最適な手順を提供</h1>
+            <Link href="/main" id={styles.subText}>試してみる</Link>
+          </div>
         </div>
         <Footer/>
       </div>

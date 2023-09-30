@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: left;
     align-items: left;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     background-attachment: fixed;
     background-image: url("/images/background.png");
@@ -15,43 +15,46 @@
 
 
     #wrapper {
-        height: 50vh;
+        flex: 1;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        align-items: flex-end;
-
+        align-items: flex-start;
+        margin-top: 5vh;
         color: black;
         border-radius: 7px;
 
-        h1 {
-            writing-mode: vertical-rl;
-            margin-left: 5vw;
-            font-size: 3rem;
-            font-weight: 700;
-
-            @include rp.mq(sm) {
-                font-size: 2rem;
-                background-color: rgb(240, 248, 255, 0.7);
-                padding: 4px 2px;
-            }
-        }
-
-        #subText {
+        #minwrapper {
             display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            writing-mode: vertical-rl;
-            margin-right: 5vw;
-            text-decoration: none;
+            flex-direction: row;
+            align-items: flex-end;
 
-            @include rp.mq(sm) {
-                background-color: rgb(240, 248, 255, 0.7);
-                padding: 4px 2px;
+            h1 {
+                writing-mode: vertical-rl;
+                margin-left: 5vw;
+                font-size: 3rem;
+                font-weight: 700;
+    
+                @include rp.mq(sm) {
+                    font-size: 2rem;
+                    background-color: rgb(240, 248, 255, 0.7);
+                    padding: 4px 2px;
+                }
             }
-
-            &:hover {
-                border-right: 10px solid gray;
+    
+            #subText {
+                writing-mode: vertical-rl;
+                margin-right: 5vw;
+                text-decoration: none;
+    
+                @include rp.mq(sm) {
+                    background-color: rgb(240, 248, 255, 0.7);
+                    padding: 4px 2px;
+                }
+    
+                &:hover {
+                    border-right: 10px solid gray;
+                }
             }
         }
 
