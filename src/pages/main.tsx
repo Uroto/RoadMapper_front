@@ -6,6 +6,7 @@ import { flowReq } from './api/flowReq'
 import Header from './module/Header';
 import Footer from './module/Footer';
 import Image from 'next/image';
+import 'dotenv/config';
 
 export default function Home() {
   const [data, setdata] = useState<gptResType>({ word: '', topic: '', flow: [] });
@@ -15,7 +16,7 @@ export default function Home() {
   const [time, setTime] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [generated, setGenerated] = useState<boolean>(false);
-  const url:string = "http://localhost:5000/generate";
+  const url:string = process.env.NEXT_PUBLIC_ENTRY_POINT!;
 
   const btnHandler = async () => {
     if (word === '' || level === '' || time === ''){
@@ -24,6 +25,7 @@ export default function Home() {
     setLoading(true);
     try {
       const res = await flowReq(url, word, level, time);
+      console.log(res);
       setdata(res);
     } catch(err) {
       console.log(err);
