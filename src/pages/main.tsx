@@ -42,12 +42,12 @@ export default function Home() {
       <div id={styles.main}>
         <div id={styles.top}>
           <div id={styles.input}>
-            <i id={styles.logo}><img src="/images/chatgpt-icon.png" alt="" width="35" height="35" /></i>
+            <i id={styles.logo}><Image src="/images/chatgpt-icon.png" alt="" width="35" height="35" /></i>
             <input type="text" placeholder="習得したいモノ" value={text} onChange={(e) => {
               setWord(e.target.value);
               setText(e.target.value);
             }}/>
-            <button onClick={btnHandler} disabled={loading}><Image src="/images/send.svg" width="27" height="27" alt=''></Image></button>
+            <button onClick={btnHandler} disabled={loading}><Image src="/images/send.svg" width="27" height="27" alt='' /></button>
           </div>
           <div id={styles.choose}>
             <select 
